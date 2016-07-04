@@ -32,11 +32,11 @@ div {
 }
 
 /*-- Search box --*/
-.search-box-div {
+.side-bar .search-box-div {
   background: #ececec;
 }
 
-#search-box {
+.side-bar .search-box-div .search-box {
   border: 0;
   border-radius: 5px;
   font-size: 15px;
@@ -49,7 +49,7 @@ div {
 }
 
 /*-- Search results --*/
-#search-results {
+.search-results {
   background: #fbfbfb;
   list-style: none;
   margin: 0;
@@ -61,7 +61,7 @@ a {
   text-decoration: none;
 }
 
-.search-element {
+.search-results .search-element {
   border-radius: 5px;
   border-bottom: 1px solid #ececec;
   height: 43px;
@@ -72,7 +72,7 @@ a {
   cursor: pointer;
 }
 
-.search-element:hover {
+.search-results .search-element:hover {
   background: #ececec; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* For Opera 11.1 to 12.0 */
@@ -80,36 +80,37 @@ a {
   background: linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* Standard syntax */
 }
 
-.title {
+.search-results .search-element .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: inherit;
 }
 
-.title-span {
+.search-results .search-element .title .title-span {
   color: blue;
   font-size: 15px;
   font-weight: bold;
 }
 
-.rating-span {
+.search-results .search-element .title .rating-span {
   font-size: 12px;
 }
 
-.address {
+.search-results .search-element .address {
+  font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: inherit;
 }
 
-.distance {
+.search-results .search-element .distance {
   font-size: 12px;
   color: green;
 }
 
-.error-message {
+.search-results .error-message {
   color: red;
   font-weight: bold;
   margin: 0;
