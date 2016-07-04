@@ -1,0 +1,16 @@
+{
+  "name": "nearby-search-api",
+  "version": "1.0.0",
+  "description": "This app can be used to get nearby places using the google nearby search api",
+  "main": "runServer.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ranatlm19",
+  "license": "ISC"
+}
