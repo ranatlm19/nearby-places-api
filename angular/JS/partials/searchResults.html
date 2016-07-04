@@ -1,0 +1,14 @@
+<div ng-repeat="place in searchedPlaces">
+  <li class="search-element">
+    <div class="elementHeader">
+      <div class="title"> 
+        <span class="title-span">{{ place.name }}</span>
+        <span class="rating-span">{{ place.rating ? "Rating - " + place.rating : "" }}</span>
+      </div>
+    </div>
+    <div class="elementBody">
+      <div class="address">{{ place.vicinity }}</div>
+      <div class="distance">{{ place.distance }}</div>
+    </div>
+  </li>
+</div>

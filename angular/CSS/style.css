@@ -1,0 +1,285 @@
+html, body {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/*-- Map --*/
+.google-map {
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+  min-width: 300px;
+}
+
+/*-- side-bar --*/
+.side-bar {
+  background-color: #fbfbfb;
+  position: absolute;
+  height: auto;
+  max-height: 100%;
+  left:0;
+  overflow-y: auto;
+  width: 30%;
+  max-width: 300px;
+  min-width: 200px;
+  z-index: 10;
+}
+
+/*-- Search box --*/
+.side-bar .search-box-div {
+  background: #ececec;
+}
+
+.side-bar .search-box-div .search-box {
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  height: 10%;
+  min-height: 20px;
+  margin: 1%;
+  padding: 5%;
+  width: 88%;
+  min-width: 60px;
+}
+
+/*-- Search results --*/
+.search-results {
+  background: #fbfbfb;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #504a4a;
+  text-decoration: none;
+}
+
+.search-results .search-element {
+  border-radius: 5px;
+  border-bottom: 1px solid #ececec;
+  height: 43px;
+  margin: auto;
+  padding: 5px 10px;
+  width: inherit;
+  color: grey;
+  cursor: pointer;
+}
+
+.search-results .search-element:hover {
+  background: #ececec; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#a7ceff, #b0c8f5, #a7ceff); /* Standard syntax */
+}
+
+.search-results .search-element .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: inherit;
+}
+
+.search-results .search-element .title .title-span {
+  color: blue;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search-results .search-element .title .rating-span {
+  font-size: 12px;
+}
+
+.search-results .search-element .address {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: inherit;
+}
+
+.search-results .search-element .distance {
+  font-size: 12px;
+  color: green;
+}
+
+.search-results .error-message {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+/*-- Info Window --*/
+.info-window { 
+  display: block;
+  height: auto;
+  max-height: 300px;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 400px;
+}
+
+/*-- Info Window heading and rating --*/
+.info-window .heading-div {
+  font-family: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  background-color: #628fef;
+  color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.info-window .heading-div .heading-table { 
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+
+.info-window .heading-div .heading-table .info-window-name {
+  padding: 10px;
+  width: 330px;
+  float: left;
+}
+
+.info-window .heading-div .heading-table .info-window-name h2 {
+  margin: 0;
+}
+
+.info-window .heading-div .heading-table .heading-value {
+  display: inline-block;
+  height: 30px;
+  width: auto;
+  padding: 7px 0 0 0;
+}
+
+.info-window .heading-div .heading-table .star-image {
+  background-image: url(../img/star.png);
+  background-size: cover;
+  font-size: 10px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  color: black;
+}
+
+.info-window .heading-div .heading-table .star-image div {
+  padding: 10px 0 0 0;
+}
+
+/*-- Info window details --*/
+.info-window .details-div {
+  font-family: "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  width: auto;
+}
+
+.info-window .details-div .details-table {
+  border-spacing: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.info-window .details-div .details-table .details-row {
+  height: auto;
+  min-height: 20px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.info-window .details-div .details-table .details-row .key-name {
+  font-weight: bold;
+  height: auto;
+  left: 10px;
+  margin-top: 0;
+  top: 0;
+}
+
+.info-window .details-div .details-table .details-row .key-value {
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 300px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.map-link {
+  color: green;
+  font-weight: bold;
+}
+
+.website-link {
+  color: blue;
+  font-weight: bold;
+}
+
+.open-now,
+.permanently-closed, 
+.maps-div, 
+.website-div,
+.maps-div,
+.website-div {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 0 5px 0;
+}
+
+/*-- Schedule table --*/
+.schedule-table {
+  border-spacing: 0;
+  height: auto;
+  margin: 0 0 0 10px;
+  padding: 0;
+  width: 100%;
+}
+.schedule-table .schedule-row {
+  display: block;
+}
+
+.schedule-table .schedule-row .schedule-key-name {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 70px;
+}
+
+.schedule-table .schedule-row .schedule-value-name {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+
+/*-- hides scrollbar of info window --*/
+::-webkit-scrollbar {
+  background: transparent;  
+  width: 0;  
+}
