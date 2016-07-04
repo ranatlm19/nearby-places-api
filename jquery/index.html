@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Places</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <!-- side-bar -->
+  <div class="side-bar">
+    <!-- Search box -->
+    <div class="search-box-div">
+      <input type="text" placeholder="Search text" id="search-box" class="search-box"/>
+    </div>
+    <!-- Search results -->
+    <ul id="search-results">
+    </ul>
+  </div>
+
+  <!-- Map container -->
+  <div id="map" class="map"></div>
+  <script src="JS/util.js"></script>
+  <script src="JS/infoWindowTemplate.js"></script>
+  <script src="JS/jquery-3.0.0.js"></script>
+  <script src="JS/init.js"></script>
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyArkU8fqloFnmgDfVOMqaAwJjC_i0V7za4&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>
