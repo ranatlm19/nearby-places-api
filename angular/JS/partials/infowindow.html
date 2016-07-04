@@ -1,0 +1,95 @@
+<div>
+  <div class="info-window">
+    <div class="heading-div">
+      <div class="heading-table">
+        <div class="info-window-name">
+          <h2>
+            {{ currentPlace.name }}
+          </h2>
+        </div>
+        <div class="heading-value">
+          <div class="star-image" ng-if="currentPlace.rating">
+            <div>
+              {{ currentPlace.rating }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details-div">
+      <div class="open-now" ng-if="currentPlace.opening_hours && currentPlace.opening_hours.open_now">
+        <span class="green">
+          Open Now
+        </span>
+      </div>
+      <div class="open-now" ng-if="currentPlace.opening_hours && !currentPlace.opening_hours.open_now">
+        <span class="red">
+          Closed Now
+        </span>
+      </div>
+      <div class="permanently-closed" ng-if="currentPlace.permanently_closed">
+        <span class="red">
+          Permanently closed
+        </span>
+      </div>
+
+      <div class="details-table">
+        <div class="details-row" ng-if="currentPlace.formatted_address">
+          <div class="key-name">
+            Address
+          </div>
+          <div class="key-value">
+            <span>
+              {{ currentPlace.formatted_address }}
+            </span>
+          </div>
+        </div>
+
+        <div class="details-row" ng-if="currentPlace.international_phone_number">
+          <div class="key-name">
+            Phone
+          </div>
+          <div class="key-value">
+            <span>
+              {{ currentPlace.international_phone_number }}
+            </span>
+          </div>
+        </div>
+
+        <div class="details-row" ng-if="currentPlace.opening_hours && currentPlace.opening_hours.weekday_text">
+          <div class="key-name">
+            Schedule
+          </div>
+          <div class="key-value">
+            <div class="schedule-table">
+              <div class="schedule-row" ng-repeat="weekday in currentPlace.opening_hours.weekday_text">
+                <div class="schedule-key-name">
+                  {{ getWeekDayDetails(weekday).day }}
+                </div>
+                <div class="schedule-value-name">
+                  <span>
+                    {{ getWeekDayDetails(weekday).sched }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="maps-div" ng-if="currentPlace.url">
+          <a href="{{ currentPlace.url }}" target="_blank">
+            <span class="map-link">
+              Map Link
+            </span>
+          </a>
+        </div>
+        <div class="website-div" ng-if="currentPlace.website">
+          <a href="{{ currentPlace.website }}" target="_blank">
+            <span class="website-link">
+              Website
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

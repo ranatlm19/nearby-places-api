@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="google-maps-nearby-search-app">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Search Nearby Places - Angular</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.20/angular.js" data-semver="1.3.20"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="JS/app.js"></script>
+    <script src="JS/controllers/mainController.js"></script>
+    <script src="JS/controllers/searchController.js"></script>
+    <script src="JS/services/services.js"></script>
+  </head>
+
+  <body ng-controller="mainController">
+      <!-- side-bar -->
+  <div class="side-bar">
+    <!-- Search box -->
+    <div class="search-box-div">
+      <input type="text" placeholder="Search text" id="search-box" class="search-box" ng-keyup="search($event)" ng-model="searchText"/>
+    </div>
+    <!-- Search results -->
+    <ul id="search-results" class="search-results" ng-controller="searchController" ng-click="searchElementClick($event)">
+      <ng-view></ng-view>
+    </ul>
+  </div>
+
+    <div id="map" class="google-map" lat="12.198314" long="77.594545"></div>
+  </body>
+
+</html>
