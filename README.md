@@ -1,5 +1,5 @@
 # nearby-places-api
-This is an app which uses Google Nearby Places Search API (https://developers.google.com/maps/documentation/javascript/places) to find nearby places. We can find a variety of places around us including Restaurants, pubs, ATMs, banks, etc.
+This is an app which uses Google Nearby Places Search API (https://developers.google.com/maps/documentation/javascript/places) to find nearby places. We can find a variety of places around us including Restaurants, Pubs, ATMs, Banks, etc.
 
 # Setup
 Initially you need to install **git** before proceeding forward.
