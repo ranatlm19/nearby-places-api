@@ -31,26 +31,26 @@ function createListElement(place, distance) {
 }
 
 function createNewMarker(map, place) {
-  // var image = createPlaceImage(place);
+  var image = createPlaceImage(place);
   var marker = new google.maps.Marker({
     map: map,
-    // icon: image,
+    icon: image,
     title: place.name,
     position: place.geometry.location
   });
   return marker;
 }
 
-// function createPlaceImage(place) {
-//   var image = {
-//     url: place.icon,
-//     size: new google.maps.Size(71, 71),
-//     origin: new google.maps.Point(0, 0),
-//     anchor: new google.maps.Point(17, 34),
-//     scaledSize: new google.maps.Size(25, 25)
-//   };
-//   return image;
-// }
+function createPlaceImage(place) {
+  var image = {
+    url: place.icon,
+    size: new google.maps.Size(71, 71),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(17, 34),
+    scaledSize: new google.maps.Size(25, 25)
+  };
+  return image;
+}
 
 function getLocations(places) {
   var i;

@@ -173,12 +173,25 @@ app.controller('mainController', ['$scope', '$rootScope', '$location', '$compile
 }
 
 function createNewMarker(map, place) {
+  var image = createMarkerIcon(place);
   var marker = new google.maps.Marker({
     map: map,
+    icon: image,
     title: place.name,
     position: place.geometry.location
   });
   return marker;
+}
+
+function createMarkerIcon(place) {
+  var image = {
+    url: place.icon,
+    size: new google.maps.Size(71, 71),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(17, 34),
+    scaledSize: new google.maps.Size(25, 25)
+  };
+  return image;
 }
 
 function initializeMap() {
