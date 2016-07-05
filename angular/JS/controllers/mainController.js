@@ -98,48 +98,6 @@ app.controller('mainController', ['$scope', '$rootScope', '$location', '$compile
           alert(status);
           break;
         }
-
-        // case google.maps.DistanceMatrixStatus.INVALID_REQUEST:
-        // {
-        //   setErrorMessage("Invalid request");
-        //   break;
-        // }
-
-        // case google.maps.DistanceMatrixStatus.MAX_ELEMENTS_EXCEEDED:
-        // {
-        //   setErrorMessage("Maximum elements exceeded");
-        //   break;
-        // }
-
-        // case google.maps.DistanceMatrixStatus.MAX_DIMENSIONS_EXCEEDED:
-        // {
-        //   setErrorMessage("Maximum dimensions exceeded");
-        //   break;
-        // }
-
-        // case google.maps.DistanceMatrixStatus.OVER_QUERY_LIMIT:
-        // {
-        //   setErrorMessage("Query limit exceeded");
-        //   break;
-        // }
-
-        // case google.maps.DistanceMatrixStatus.REQUEST_DENIED:
-        // {
-        //   setErrorMessage("Request denied");
-        //   break;
-        // }
-
-        // case google.maps.DistanceMatrixStatus.UNKNOWN_ERROR:
-        // {
-        //   setErrorMessage("Unknown error occurred");
-        //   break;
-        // }
-
-        // default :
-        // {
-        //   setErrorMessage("Unexpected error occurred");
-        //   break;
-        // }
       }
     }
 
