@@ -9,7 +9,7 @@ git clone <repository-clone-link>
 ```
 The repository-clone-link can be found in the git repository
 
-Now execute the following command to install all the dependencies needed
+Now execute the following command to install all the dependencies needed (install **npm** before executing the following)
 ```
 npm install
 ```
