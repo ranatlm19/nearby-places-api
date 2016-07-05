@@ -4,7 +4,7 @@ var path = require('path');
 
 app.use(express.static(__dirname));
 
-var server = app.listen(8000, function () {
+var server = app.listen(8080, function () {
 
   var host = server.address().address
   var port = server.address().port
@@ -15,11 +15,14 @@ var server = app.listen(8000, function () {
 
 
 app.get('/jquery', function(req, res) {
-  res.sendFile(path.join(__dirname+'/jquery/index.html'));
+  res.sendFile(path.join('jquery/index.html'));
 });
 app.get('/angular', function(req, res) {
-  res.sendFile(path.join(__dirname+'/angular/index.html'));
+  res.sendFile(path.join('angular/index.html'));
 });
 app.get('/angular/*', function(req, res) {
+  res.redirect('/angular');
+});
+app.get('/', function(req, res) {
   res.redirect('/angular');
 });
