@@ -3,7 +3,7 @@ var map;
 
 // Default location set to Practo technologies location
 var userLocation = {
-  lat: 12.798314,
+  lat: 12.898314,
   lng: 77.594545
 };
 

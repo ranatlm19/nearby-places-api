@@ -3,7 +3,7 @@ app.controller('mainController', ['$scope', '$rootScope', '$location', '$compile
 
     $scope.name = 'World';
     $scope.userLocation = {
-      lat: 12.798314,
+      lat: 12.898314,
       lng: 77.594545
     };
     lazyLoadApi.then(initializeMap);
